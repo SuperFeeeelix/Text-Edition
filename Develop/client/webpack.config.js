@@ -17,7 +17,7 @@ module.exports = () => {
     plugins: [
       // Generate HTML files
       new HtmlWebpackPlugin({
-        template: './src/index.html', // Replace with your HTML template path
+        template: './src/index.html',
         chunks: ['main'],
       }),
       // Generate manifest file for PWA
@@ -30,7 +30,7 @@ module.exports = () => {
         crossorigin: 'use-credentials',
         icons: [
           {
-            src: path.resolve('src/images/icon.png'), // Replace with your icon path
+            src: path.resolve('src/images/icon.png'), 
             sizes: [96, 128, 192, 256, 384, 512],
             destination: path.join('assets', 'icons'),
           },
@@ -38,7 +38,7 @@ module.exports = () => {
       }),
       // Inject the service worker into HTML
       new InjectManifest({
-        swSrc: './src/js/service-worker.js', // Replace with your service worker file path
+        swSrc: './src/src-sw.js',
         exclude: [/\.map$/, /manifest$/, /service-worker\.js$/],
       }),
     ],
