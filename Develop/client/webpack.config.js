@@ -36,7 +36,7 @@ module.exports = () => {
           },
         ],
       }),
-      // Inject the service worker into HTML
+
       new InjectManifest({
         swSrc: './src/src-sw.js',
         exclude: [/\.map$/, /manifest$/, /service-worker\.js$/],
@@ -45,7 +45,7 @@ module.exports = () => {
 
     module: {
       rules: [
-        // Configure CSS loaders and Babel rules as needed
+
         {
           test: /\.css$/,
           use: ['style-loader', 'css-loader'],
